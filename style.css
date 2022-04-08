@@ -1,0 +1,72 @@
+body{
+  background-color: black !important;
+}
+header{
+  background-color: rgb(53, 53, 53);
+  padding: 10px 0;
+}
+nav{
+  display: flex;
+  justify-content: center;
+}
+nav button{
+  margin: 0px 50px;
+}
+main{
+  margin: 25px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+}
+main h1{
+  color: rgb(201, 176, 176) ;
+}
+main h4{
+  color: rgb(201, 176, 176) ;
+}
+#chat{
+  text-align: center;
+  background-color: rgb(19, 18, 18);
+  width: 100%;
+}
+#level{
+  margin: 25px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+#level p{
+  font-size: 20px;
+  color: black;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+#exp-holder{
+  margin-top: 10px;
+  border: 2px solid gray;
+  height: 50px;
+  width: 25%;
+  border-radius: 10px;
+}
+#exp{
+  height: 46px;
+  width: 47%;
+  max-width: 100%;
+  background-color: brown;
+  border-radius: 8px;
+}
+#clicker{
+  margin: 25px;
+  padding: 50px 150px !important;
+  font-size: 50px !important;
+  box-shadow: 5px 5px 5px black;
+}
+#clicker:active{
+  background-color: black !important;
+}
+main p{
+  color: rgb(201, 176, 176);
+}
