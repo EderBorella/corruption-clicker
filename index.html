@@ -10,29 +10,40 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <title>Corruption Clicker</title>
 </head>
+
 <body>
-<header>
-  <nav>
-    <button class="btn btn-secondary" id="reset">Devolver tudo e se entregar para policia</button>
-    <button class="btn btn-secondary" id="save">Salvar</button>
-    <button class="btn btn-secondary" id="news">Consequencias</button>
-  </nav>
-</header>
-<main>
-  <div id="chat">
-  <h1>Bem vindo ao meu gabinete...</h1>
-  <h4>Sobre aquilo que haviamos conversado, fique avontade para pegar quanto quiser.</h4>
-</div>
-  <div id="level">
-    <p>Título: Tapa buracos de Belém.</p>
-    <!-- https://g1.globo.com/pa/para/noticia/2021/02/01/operacao-investiga-fraudes-e-desvios-de-verbas-publicas-do-programa-asfalto-na-cidade-no-pa.ghtml -->
-  <div id="exp-holder">
-    <div id="exp"></div>
-  </div>
-</div>
-  <button class="btn btn-danger" id="clicker">Pegar!</button>
-  <p id="output"> teste teste teste teste teste teste teste teste teste teste teste</p>
-</main>
+  <header>
+    <nav>
+      <button class="btn btn-secondary" id="reset">Devolver tudo e se entregar para policia</button>
+      <button class="btn btn-secondary" id="save">Salvar</button>
+      <button class="btn btn-secondary" id="news">Consequencias</button>
+    </nav>
+  </header>
+  <main>
+    <div id="chat">
+      <h1>Bem vindo ao meu gabinete...</h1>
+      <h4>Sobre aquilo que haviamos conversado, fique avontade para pegar quanto quiser.</h4>
+    </div>
+    <div id="levelConteiner">
+      <div id="titulo">
+        <a href="https://g1.globo.com/pa/para/noticia/2021/02/01/operacao-investiga-fraudes-e-desvios-de-verbas-publicas-do-programa-asfalto-na-cidade-no-pa.ghtml" target="blank">Título: Tapa buracos de Belém.</a>
+      </div>
+      <p id="level">Caixa: 0</p>
+      <div id="exp-holder">
+        <div id="exp"></div>
+      </div>
+    </div>
+    <div id="numbers">
+      <div id="numbers-left">
+      </div>
+      <button class="btn btn-danger" id="clicker">Pegar!</button>
+      <div id="numbers-right">
+        <p id="money">$0,00</p>
+      </div>
+    </div>
+    <p id="output"> teste teste teste teste teste teste teste teste teste teste teste</p>
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>

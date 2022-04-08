@@ -14,9 +14,6 @@ nav button{
 }
 main{
   margin: 25px 0;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   background-color: rgb(32, 32, 32);
 }
 main h1{
@@ -30,19 +27,54 @@ main h4{
   background-color: rgb(19, 18, 18);
   width: 100%;
 }
-#level{
+#levelConteiner{
   margin: 25px;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-#level p{
+#levelConteiner p{
   font-size: 20px;
   color: black;
   background-color: grey;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px black;
+}
+#levelConteiner a {
+  font-size: 20px;
+  color: black;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+#levelConteiner a:hover {
+  background-color: rgb(204, 42, 42);
+  color: white;
+}
+#titulo{
+  margin-bottom: 20px;
+}
+#numbers{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#numbers-left{
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  width: 33%;  
+}
+#numbers-right{
+  width: 33%;  
+}
+#numbers-right p{
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 5px 5px 5px black;
 }
 #exp-holder{
   margin-top: 10px;
@@ -53,7 +85,7 @@ main h4{
 }
 #exp{
   height: 46px;
-  width: 47%;
+  width: 0%;
   max-width: 100%;
   background-color: brown;
   border-radius: 8px;
