@@ -6,7 +6,7 @@ const levelOutput = document.getElementById('level');
 const mainChat = document.getElementById('chat');
 const title = document.getElementById('titulo');
 const upgradesContainer = document.getElementById('numbers-left');
-const powerUpContainer = document. getElementById('numbers-right')
+const powerUpContainer = document.getElementById('numbers-right')
 const output = document.getElementById('output');
 let counter = 0;
 let expProgress = 0;
@@ -17,7 +17,7 @@ let clickPower = 1;
 
 
 const levelUp = () => {
-  expProgress += 50;
+  expProgress += 10;
   expBar.style.width = `${expProgress}%`
   if (expProgress >= 100) {
     expProgress = 0;
@@ -71,10 +71,10 @@ const upgrade1text = (lvl) => {
 }
 
 const upgrade1func = () => {
-    setInterval(() => {
-      counter += 1;
-      clickerCounter.innerText = `$${counter},00`;
-    }, 1000)
+  setInterval(() => {
+    counter += 1;
+    clickerCounter.innerText = `$${counter},00`;
+  }, 1000)
 }
 const upgrade1rmv = () => {
   document.getElementById('firstUpgrade').remove()
@@ -82,7 +82,7 @@ const upgrade1rmv = () => {
 }
 clickerInput.addEventListener('click', clicker);
 upgradesContainer.addEventListener('click', (event) => {
-  if (event.target.id === 'firstUpgrade'){
+  if (event.target.id === 'firstUpgrade') {
     upgrade1func();
     upgrade1rmv();
   }
@@ -92,9 +92,9 @@ upgradesContainer.addEventListener('click', (event) => {
 const powerUp1btn = (lvl) => {
   if (lvl >= 5 && powerUpCounter === 0) {
     let powerUp = document.createElement('button');
-    powerUp.className = 'btn btn-warning';
+    powerUp.className = 'btn btn-light';
     powerUp.id = 'firstPowerUp';
-    powerUp.innerText = 'Nota fria';
+    powerUp.innerText = 'Nota fria ($50,00)';
     powerUpContainer.appendChild(powerUp);
     powerUp1text(level);
     powerUpCounter += 1;
@@ -105,7 +105,7 @@ const powerUp1text = (lvl) => {
     let powerUp = document.createElement('p');
     powerUp.className = 'fst-italic upgradeText';
     powerUp.id = 'firstPowerUpText'
-    powerUp.innerText = `Um velho amigo seu tem uma papelaria em um bairro afastado. Ele consegue fazer algumas frias para você, com o triplo do valor. Um para você, um para o material e um para ele. A matematica nunca falha!`;
+    powerUp.innerText = `Um velho amigo seu tem uma papelaria em um bairro afastado. Ele consegue fazer algumas notas para você com o triplo do valor. Um para você, um para o material e um para ele. A matematica nunca falha!\n (Dobra o quanto você pode pegar por vez.)`;
     powerUpContainer.appendChild(powerUp);
   }
 }
@@ -113,13 +113,20 @@ const powerUp1func = () => {
   clickPower += 1;
 }
 const powerUp1rmv = () => {
-document.getElementById('firstPowerUp').remove()
-document.getElementById('firstPowerUpText').remove()
+  document.getElementById('firstPowerUp').remove()
+  document.getElementById('firstPowerUpText').remove()
 }
+const powerUp1Cost = () => {
+  counter -= 50;
+  clickerCounter.innerText = `$${counter},00`;
+};
 clickerInput.addEventListener('click', clicker);
 powerUpContainer.addEventListener('click', (event) => {
-if (event.target.id === 'firstPowerUp'){
-  powerUp1func();
-  powerUp1rmv();
-}
+  if (event.target.id === 'firstPowerUp') {
+    if (counter > 49) {
+      powerUp1func();
+      powerUp1rmv();
+      powerUp1Cost();
+    }
+  }
 })
