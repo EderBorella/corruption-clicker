@@ -64,18 +64,23 @@ main h4{
 }
 #numbers-left{
   display: flex;
-  flex-flow: row wrap;
-  justify-items: center;
-  width: 33%;  
+  flex-flow: column wrap;
+  align-items: center;
+  width: 33%;
 }
-#numbers-right{
-  width: 33%;  
+.upgradeText {
+  text-align: center;
 }
-#numbers-right p{
+#numbers-center p{
   text-align: center;
   font-size: 60px;
   text-shadow: 5px 5px 5px black;
 }
+#numbers-right{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 33%;}
 #exp-holder{
   margin-top: 10px;
   border: 2px solid gray;
@@ -101,4 +106,7 @@ main h4{
 }
 main p{
   color: rgb(201, 176, 176);
+}
+#output {
+  text-align: center;
 }
